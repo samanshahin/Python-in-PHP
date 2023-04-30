@@ -6,8 +6,6 @@ from PyPDF2 import PdfReader
 myfile = open('sample.pdf', mode='rb')
 var = PdfReader(myfile)
 p = var.pages[0]
-#var = PyPDF2.PdfFileReader(myfile)
-#p = var.getPage(0)	#must specify the page number
 print('Number of pages: ' + str(len(var.pages)))
 print('The text content: ' + p.extract_text())
 count = 0
